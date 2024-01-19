@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="Task">
+        <property name="idTask" type="int" strict="true" />
+        <property name="userUuid" type="string" />
+        <property name="title" type="string" />
+        <property name="description" type="string"/>
+        <property name="dueDate" type="string" />
+        <property name="status" type="string" />
+    </transfer>
+
+    <transfer name="TaskResponse">
+        <property name="task" type="Task" />
+        <property name="isSuccess" type="bool" />
+        <property name="message" type="string" />
+        <property name="errors" type="string[]" singular="error" />
+    </transfer>
+
+    <transfer name="TaskCollectionResponse">
+        <property name="tasks" type="Task[]" singular="task" />
+    </transfer>
+
+    <transfer name="TaskCriteria">
+        <property name="taskConditions" type="TaskConditions"/>
+        <property name="pagination" type="Pagination"/>
+    </transfer>
+
+    <transfer name="TaskConditions">
+        <property name="userUuid" type="string" />
+        <property name="title" type="string" />
+        <property name="description" type="string" />
+    </transfer>
+
+    <transfer name="Mail">
+        <property name="task" type="Task" />
+    </transfer>
+
+    <transfer name="TaskValidationResponse">
+        <property name="task" type="Task" />
+        <property name="isSuccess" type="bool" />
+        <property name="errors" type="string[]" singular="error" />
+    </transfer>
+</transfers>

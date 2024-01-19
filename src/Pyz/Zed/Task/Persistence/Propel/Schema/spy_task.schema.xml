@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Task\Persistence" package="src.Orm.Zed.Task.Persistence">
+
+    <table name="pyz_task">
+        <column name="id_task" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
+        <column name="user_uuid" type="VARCHAR" size="255"/>
+        <column name="title" required="true" size="45" type="VARCHAR"/>
+        <column name="description" required="true" size="255" type="VARCHAR"/>
+        <column name="due_date" required="true" size="45" type="VARCHAR"/>
+        <column name="status" required="true" size="45" valueSet="active,blocked,deleted" type="VARCHAR"/>
+        <behavior name="timestampable"/>
+    </table>
+
+</database>
