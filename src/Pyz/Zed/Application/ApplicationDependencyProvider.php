@@ -131,6 +131,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
             new HttpApplicationPlugin(),
             new ErrorHandlerApplicationPlugin(),
             new ValidatorApplicationPlugin(),
+            new TwigApplicationPlugin(),
         ];
     }
 }
