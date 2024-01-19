@@ -11,7 +11,7 @@ use Codeception\Test\Unit;
 use Generated\Shared\Transfer\MailRecipientTransfer;
 use Generated\Shared\Transfer\MailTransfer;
 use Generated\Shared\Transfer\TaskTransfer;
-use Orm\Zed\User\Persistence\PyzTaskQuery;
+use Orm\Zed\Task\Persistence\PyzTaskQuery;
 use Pyz\Zed\Task\Business\TaskFacade;
 use Pyz\Zed\Task\Communication\Plugin\Mail\TaskStatusNotificationMailTypePlugin;
 use Pyz\Zed\Task\TaskDependencyProvider;

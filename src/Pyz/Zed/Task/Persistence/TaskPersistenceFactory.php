@@ -15,6 +15,7 @@ use Spryker\Zed\Kernel\Persistence\AbstractPersistenceFactory;
  * @method \Pyz\Zed\Task\Persistence\TaskEntityManagerInterface getEntityManager()
  * @method \Pyz\Zed\Task\Persistence\TaskRepositoryInterface getRepository()
  * @method \Pyz\Zed\Task\TaskConfig getConfig()
+ * @method \Pyz\Zed\Task\Persistence\TaskQueryContainerInterface getQueryContainer()
  */
 class TaskPersistenceFactory extends AbstractPersistenceFactory
 {

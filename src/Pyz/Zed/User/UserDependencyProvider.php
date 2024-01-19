@@ -7,6 +7,7 @@
 
 namespace Pyz\Zed\User;
 
+use Pyz\Zed\Task\Communication\Plugin\User\UserTaskTransferExpanderPlugin;
 use Spryker\Zed\Acl\Communication\Plugin\GroupPlugin;
 use Spryker\Zed\AgentGui\Communication\Plugin\UserAgentFormExpanderPlugin;
 use Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin;
@@ -97,6 +98,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     {
         return [
             new UserLocaleTransferExpanderPlugin(),
+            new UserTaskTransferExpanderPlugin(),
         ];
     }
 

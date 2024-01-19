@@ -16,6 +16,10 @@
         <property name="errors" type="string[]" singular="error" />
     </transfer>
 
+    <transfer name="User">
+        <property name="tasks" type="Task[]" singular="task" />
+    </transfer>
+
     <transfer name="TaskCollectionResponse">
         <property name="tasks" type="Task[]" singular="task" />
     </transfer>

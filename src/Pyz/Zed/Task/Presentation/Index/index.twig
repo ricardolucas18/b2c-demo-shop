@@ -1,0 +1,13 @@
+{% extends '@Gui/Layout/layout.twig' %}
+
+{% block headTitle %}
+    {{ 'Tasks' | trans }}
+{% endblock %}
+
+{% block content %}
+    {% embed '@Gui/Partials/widget.twig' with { widget_title: 'Tasks' } %}
+        {% block widget_content %}
+            {{ tasks | raw }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

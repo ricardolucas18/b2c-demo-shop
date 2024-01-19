@@ -22,6 +22,7 @@ use Spryker\Zed\User\Business\UserFacadeInterface;
  * @method \Pyz\Zed\Task\Persistence\TaskEntityManagerInterface getEntityManager()
  * @method \Pyz\Zed\Task\Persistence\TaskRepositoryInterface getRepository()
  * @method \Pyz\Zed\Task\TaskConfig getConfig()
+ * @method \Pyz\Zed\Task\Persistence\TaskQueryContainerInterface getQueryContainer()
  */
 class TaskBusinessFactory extends AbstractBusinessFactory
 {

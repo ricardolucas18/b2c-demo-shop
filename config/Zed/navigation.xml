@@ -325,6 +325,23 @@
                 <controller>group</controller>
                 <action>index</action>
             </groups>
+            <task>
+                <label>User Tasks</label>
+                <title>Tasks</title>
+                <bundle>task</bundle>
+                <controller>index</controller>
+                <action>index</action>
+                <pages>
+                    <delete>
+                        <label>Delete Task</label>
+                        <title>Delete Task</title>
+                        <bundle>task</bundle>
+                        <controller>edit</controller>
+                        <action>confirm-delete</action>
+                        <visible>0</visible>
+                    </delete>
+                </pages>
+            </task>
         </pages>
     </users>
     <app-catalog-gui>

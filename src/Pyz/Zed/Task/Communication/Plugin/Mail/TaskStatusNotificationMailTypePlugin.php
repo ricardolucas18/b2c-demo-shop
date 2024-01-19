@@ -16,6 +16,8 @@ use Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface;
 /**
  * @method \Pyz\Zed\Task\TaskConfig getConfig()
  * @method \Pyz\Zed\Task\Business\TaskFacadeInterface getFacade()
+ * @method \Pyz\Zed\Task\Communication\TaskCommunicationFactory getFactory()
+ * @method \Pyz\Zed\Task\Persistence\TaskQueryContainerInterface getQueryContainer()
  */
 class TaskStatusNotificationMailTypePlugin extends AbstractPlugin implements MailTypeBuilderPluginInterface
 {
