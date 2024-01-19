@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "754fdf39-8ef7-4700-99d5-552bdd4be30f",
+		"name": "Tasks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7745894"
+	},
+	"item": [
+		{
+			"name": "TasksManagement",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6ImQwMzVjNmY4MWE2Y2E0NThlZDBhYTBhZjhkNjA0ZjA2MzU3MDlmNDVmYjQ0ZTg4Njg1NmFjZTQ4NmUxYWQzNzc4YmE3M2E2MGZjNGEwMTVkIiwiaWF0IjoxNzA1NDUwOTc0LjU1MDQwMSwibmJmIjoxNzA1NDUwOTc0LjU1MDQwMTksImV4cCI6MTcwNTQ3OTc3NC41Mzc4NDYxLCJzdWIiOiJ7XCJ1c2VyX3JlZmVyZW5jZVwiOm51bGwsXCJpZF91c2VyXCI6MSxcInV1aWRcIjpcImMwZTI0NGQ0LTAzZTgtNTU2Zi1hYThkLTE3NGJlOWQyMzZlNVwifSIsInNjb3BlcyI6WyJ1c2VyIl19.SP-qUWei4d4q0kTv-r1-lSPgBliVrLzyx3GCNn-pQGwMedOLODa3Kt11fy9sYweGJsjCRkYF4WTUUshEQUzUVAq6Au9LmjFUcMhDUW-0-6l16jPkm1gqp3axCR5gk5Cw0134cGrUnyxZEcETDXS1Ecrl6Cpep7WDepCunbToB349Kyq-3xLbGauR3MLyg8LS2A3Sg--Am9Qy7_q8u1kNsBrpsB_K-E87hyUNL-HEzqgWWGXBblvwTmmq0s3wAuVO_daQSyUeto5VcOWMYWo-tY1phMMC4FUoHV4ZnlTc-TI5OtqWcjq7PdKrC9vo-7LAnLN1eYMRZX_Ix8gPR-Ksjg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"userUuid\": \"c0e244d4-03e8-556f-aa8d-174be9d236e5\",\n        \"title\": \"test title\",\n        \"description\": \"Test description\",\n        \"dueDate\": \"31.12.9999\",\n        \"status\": \"To Do\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "glue-backend.de.spryker.local/task",
+							"host": [
+								"glue-backend",
+								"de",
+								"spryker",
+								"local"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6ImQwMzVjNmY4MWE2Y2E0NThlZDBhYTBhZjhkNjA0ZjA2MzU3MDlmNDVmYjQ0ZTg4Njg1NmFjZTQ4NmUxYWQzNzc4YmE3M2E2MGZjNGEwMTVkIiwiaWF0IjoxNzA1NDUwOTc0LjU1MDQwMSwibmJmIjoxNzA1NDUwOTc0LjU1MDQwMTksImV4cCI6MTcwNTQ3OTc3NC41Mzc4NDYxLCJzdWIiOiJ7XCJ1c2VyX3JlZmVyZW5jZVwiOm51bGwsXCJpZF91c2VyXCI6MSxcInV1aWRcIjpcImMwZTI0NGQ0LTAzZTgtNTU2Zi1hYThkLTE3NGJlOWQyMzZlNVwifSIsInNjb3BlcyI6WyJ1c2VyIl19.SP-qUWei4d4q0kTv-r1-lSPgBliVrLzyx3GCNn-pQGwMedOLODa3Kt11fy9sYweGJsjCRkYF4WTUUshEQUzUVAq6Au9LmjFUcMhDUW-0-6l16jPkm1gqp3axCR5gk5Cw0134cGrUnyxZEcETDXS1Ecrl6Cpep7WDepCunbToB349Kyq-3xLbGauR3MLyg8LS2A3Sg--Am9Qy7_q8u1kNsBrpsB_K-E87hyUNL-HEzqgWWGXBblvwTmmq0s3wAuVO_daQSyUeto5VcOWMYWo-tY1phMMC4FUoHV4ZnlTc-TI5OtqWcjq7PdKrC9vo-7LAnLN1eYMRZX_Ix8gPR-Ksjg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "glue-backend.de.spryker.local/task/38",
+							"host": [
+								"glue-backend",
+								"de",
+								"spryker",
+								"local"
+							],
+							"path": [
+								"task",
+								"38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6ImQwMzVjNmY4MWE2Y2E0NThlZDBhYTBhZjhkNjA0ZjA2MzU3MDlmNDVmYjQ0ZTg4Njg1NmFjZTQ4NmUxYWQzNzc4YmE3M2E2MGZjNGEwMTVkIiwiaWF0IjoxNzA1NDUwOTc0LjU1MDQwMSwibmJmIjoxNzA1NDUwOTc0LjU1MDQwMTksImV4cCI6MTcwNTQ3OTc3NC41Mzc4NDYxLCJzdWIiOiJ7XCJ1c2VyX3JlZmVyZW5jZVwiOm51bGwsXCJpZF91c2VyXCI6MSxcInV1aWRcIjpcImMwZTI0NGQ0LTAzZTgtNTU2Zi1hYThkLTE3NGJlOWQyMzZlNVwifSIsInNjb3BlcyI6WyJ1c2VyIl19.SP-qUWei4d4q0kTv-r1-lSPgBliVrLzyx3GCNn-pQGwMedOLODa3Kt11fy9sYweGJsjCRkYF4WTUUshEQUzUVAq6Au9LmjFUcMhDUW-0-6l16jPkm1gqp3axCR5gk5Cw0134cGrUnyxZEcETDXS1Ecrl6Cpep7WDepCunbToB349Kyq-3xLbGauR3MLyg8LS2A3Sg--Am9Qy7_q8u1kNsBrpsB_K-E87hyUNL-HEzqgWWGXBblvwTmmq0s3wAuVO_daQSyUeto5VcOWMYWo-tY1phMMC4FUoHV4ZnlTc-TI5OtqWcjq7PdKrC9vo-7LAnLN1eYMRZX_Ix8gPR-Ksjg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"user_uuid\": \"c0e244d4-03e8-556f-aa8d-174be9d236e5\",\n        \"title\": \"test title\",\n        \"description\": \"Test description\",\n        \"due_date\": \"31.12.9999\",\n        \"status\": \"In Progress\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "glue-backend.de.spryker.local/task/update/38",
+							"host": [
+								"glue-backend",
+								"de",
+								"spryker",
+								"local"
+							],
+							"path": [
+								"task",
+								"update",
+								"38"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6ImQwMzVjNmY4MWE2Y2E0NThlZDBhYTBhZjhkNjA0ZjA2MzU3MDlmNDVmYjQ0ZTg4Njg1NmFjZTQ4NmUxYWQzNzc4YmE3M2E2MGZjNGEwMTVkIiwiaWF0IjoxNzA1NDUwOTc0LjU1MDQwMSwibmJmIjoxNzA1NDUwOTc0LjU1MDQwMTksImV4cCI6MTcwNTQ3OTc3NC41Mzc4NDYxLCJzdWIiOiJ7XCJ1c2VyX3JlZmVyZW5jZVwiOm51bGwsXCJpZF91c2VyXCI6MSxcInV1aWRcIjpcImMwZTI0NGQ0LTAzZTgtNTU2Zi1hYThkLTE3NGJlOWQyMzZlNVwifSIsInNjb3BlcyI6WyJ1c2VyIl19.SP-qUWei4d4q0kTv-r1-lSPgBliVrLzyx3GCNn-pQGwMedOLODa3Kt11fy9sYweGJsjCRkYF4WTUUshEQUzUVAq6Au9LmjFUcMhDUW-0-6l16jPkm1gqp3axCR5gk5Cw0134cGrUnyxZEcETDXS1Ecrl6Cpep7WDepCunbToB349Kyq-3xLbGauR3MLyg8LS2A3Sg--Am9Qy7_q8u1kNsBrpsB_K-E87hyUNL-HEzqgWWGXBblvwTmmq0s3wAuVO_daQSyUeto5VcOWMYWo-tY1phMMC4FUoHV4ZnlTc-TI5OtqWcjq7PdKrC9vo-7LAnLN1eYMRZX_Ix8gPR-Ksjg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "glue-backend.de.spryker.local/task/delete/39",
+							"host": [
+								"glue-backend",
+								"de",
+								"spryker",
+								"local"
+							],
+							"path": [
+								"task",
+								"delete",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6IjQwNTkzOWM0ODZlYzUyODc3OGUwNjM1OWJmNWQyZWFkYWJhOTVmNmJhYjdjYzU3MzYzZDg2Yzg3MmI2ODUzNWJjNzA0OWRjNmJjZmNlNDQ3IiwiaWF0IjoxNzA1NTM3NDY0Ljg4MjExMiwibmJmIjoxNzA1NTM3NDY0Ljg4MjExMzksImV4cCI6MTcwNTU2NjI2NC44NTY0MjUsInN1YiI6IntcInVzZXJfcmVmZXJlbmNlXCI6bnVsbCxcImlkX3VzZXJcIjoxLFwidXVpZFwiOlwiYzBlMjQ0ZDQtMDNlOC01NTZmLWFhOGQtMTc0YmU5ZDIzNmU1XCJ9Iiwic2NvcGVzIjpbInVzZXIiXX0.v5-jX3yC6xkjcG62YEtDSFhhkd9wJqQaa5abmd_F7C2ltSlidBCC9JgAwpdzE9kFIxIYx9ulgrhBS2l1WsbdV0Io_2TLPdGdiFhWG2raNTKkX-lO9Jr_ilkpRoQ-S-DTeMYmep6dt1PYwsjWIYKPc7COlqHBQLUNcPT0iixxFFP3Y5PhQLaXLUWt4p8NRe3WOP2eNP722PCi4I1sS59I-CC4Tqtm9gFwkpL7eQVS_rvKO77SZiobQ5nyrKK9XHdElNsltj35Etgwtp7yem_TgQDXNaBAcz44o6hS9SNdGXJA-r9IZlOxsNhh0qm97V1LUhZ_34niZvMho0dpGdxG3Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"params\": {\n        \"userUuid\": \"c0e244d4-03e8-556f-aa8d-174be9d236e5\",\n        \"title\": \"Test title\",\n        \"description\": \"Test description\",\n        \"pagination\": {\n            \"offset\": 0,\n            \"limit\": 5\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "glue-backend.de.spryker.local/tasks",
+							"host": [
+								"glue-backend",
+								"de",
+								"spryker",
+								"local"
+							],
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grant_type\":\"password\", \n    \"username\":\"admin@spryker.com\", \n    \"password\":\"change123\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "glue-backend.de.spryker.local/token",
+					"host": [
+						"glue-backend",
+						"de",
+						"spryker",
+						"local"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
